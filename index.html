@@ -1,0 +1,263 @@
+<!doctype html>
+<!--[if IE 8]>         <html class="no-js ie8 lt-ie9" lang=""> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9 lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="" ng-app="IBMcheckList"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>A Fortune 500 Company Checklist</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/font-awesome.css" media="screen">
+        <link rel="stylesheet" href="css/styles.css" media="screen">
+    </head>
+    <body ng-controller="mainCtrl">
+      <!--[if lte IE 8]>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/css3-mediaqueries/0.1/css3-mediaqueries.min.js"></script>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <div class="background-image hidden-category"></div>
+
+      <div class="header-container hidden-category">
+      <header class="navbar">
+        <div class="container">
+          <div class="row">
+            <div class="logo col-xs-9 col-sm-6 col-md-8"><h4><strong>A Fortune 500 Company</strong> <span class="hidden-category page-category">Inbound Marketing Checklist in Angular.js</span></h4></div>
+            <div class="phone col-xs-3 col-sm-6 col-md-4"><a href="tel:+18005555555"><span>1-800-555-5555</span></a></div>
+          </div>
+        </div>
+      </header>
+      </div>
+
+      <div id="page-0" class="page-container hidden-category">
+        <section class="section-cta">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-10 col-md-7 callout">
+                <p>A Fortune 500 Company</p>
+                <h1><i>Inbound Marketing Checklist<span class="pink"> in Angular.js</span></i></h1>
+                <h3>Build your checklist based on your needs, and view your results.</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="page-button-container home">
+          <a class="page-button" href="" smooth-scroll target="page-1" offset="100" easing="easeInOutQuart" ng-click="showHeaderCategory(); fadeBackground();"><h4>Begin</h4><i class="fa fa-arrow-circle-down begin-icon" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div ng-controller="tableCtrl" class="hidden-category">
+      <article ng-repeat="article in IBMchecklistData">
+      <div style="visibility:hidden">{{article.category}}</div>
+      <div ng-repeat="thepage in article.pages" id="page-{{$index + 1}}" class="page-container">
+        <section class="section-table">
+          <div class="container">
+            <!-- <h4>[{{$index + 1}} of 9] Does it use:</h4> -->
+            <h5 class="category">[{{$index + 1}} of 2] Category:</h5>
+            <h4 class="category-title">{{thepage.title}}</h4>
+            <div class="table">
+              <div class="row collapse-margin header-row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 alter-padding">
+                    <div class="table-header feature">Feature:</div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 alter-padding header-column">
+                    <div class="table-inner-column first">
+                    <div class="table-header">Must Have</div>
+                    </div>
+                    <div class="table-inner-column">
+                    <div class="table-header">Nice to Have</div>
+                    </div>
+                    <div class="table-inner-column">
+                    <div class="table-header">Not Sure</div>
+                    </div>
+                </div>
+              </div>
+              <!--ng data Repeater -->
+              <div class="row collapse-margin" ng-repeat="item in thepage.content" ng-class="{'subgroup': item.subgroup == true}">
+                <div class="col-xs-12 col-md-6 col-lg-6  alter-padding">
+                    <div class="table-content">
+                      <h4 ng-class="{'subgroup': item.subgroup == true}">{{item.title}}</h4><a href="" ng-if="item.text != ''" ng-click="activeButton($event)"><i class="fa fa-angle-down more-info ng-scope" ng-if="item.text != ''"></i></a>
+                    </div>
+                </div>
+                <div class="col-xs-12 bg-line sml-mobile"><h6 class="bg-line"><em>Your rating:</em></h6></div>
+
+                <div ng-repeat="selection in item.data" ng-class="{'completed': disabled}">
+                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 alter-padding">
+                        <div class="table-inner-column first">
+                        <input type="checkbox" class="checkbox-custom" ng-model="selection.musthave" ng-class="{'disabled': disabled}" ng-click="disabled = !disabled" ng-disabled="disabled" ng-init="disabled=false">
+                        <label class=" checkbox-custom-label"></label>
+                        <label class="mobile checkbox-custom-label">Must Have</label>
+                        </div>
+                        <div class="table-inner-column">
+                        <input type="checkbox" class="checkbox-custom" ng-model="selection.nicetohave" ng-class="{'disabled': disabled}" ng-click="disabled = !disabled" ng-disabled="disabled" ng-init="disabled=false">
+                        <label class=" checkbox-custom-label"></label>
+                        <label class="mobile checkbox-custom-label">Nice to Have</label>
+                        </div>
+                        <div class="table-inner-column">
+                        <input type="checkbox" class="checkbox-custom" ng-model="selection.notsure" ng-class="{'disabled': disabled}" ng-click="disabled = !disabled" ng-disabled="disabled" ng-init="disabled=false">
+                        <label class=" checkbox-custom-label"></label>
+                        <label class="mobile checkbox-custom-label">Not Sure</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xs-12 explanatory-text" ng-if="item.text != ''">
+                  <p>{{item.text}}</p>
+                </div>
+              </div>
+              <!--End ng data Repeater -->
+            </div>
+          </div>
+        </section>
+
+        <div class="page-button-container">
+          <h4 ng-show="$index == 1" style="padding-top:160px">See Results</h4>
+          <a href="" class="page-button center" smooth-scroll target="page-results" offset="100" ng-show="$index == 1"  ng-click="revealContent()"><i class="fa fa-arrow-circle-down results-icon" aria-hidden="true"></i></a>
+        </div>
+
+      </div>
+      </article>
+    </div>
+
+
+
+    <div id="page-results" class="page-container">
+      <printheader></printheader>
+      <section class="section-results">
+        <div class="container">
+          <h5 class="category large">Your Prioritized Checklist:</h5>
+          <div class="row collapse-margin" style="position:relative">
+            <h4 class="category-title"><i><strong>Must-Have</strong></i> Features:</h4><a href="" ng-click="activeResult($event)" class="sml-mobile"><i class="fa fa-angle-down more-results active"></i></a>
+            <!-- <div class="glossary-container" ng-controller="glossaryModalCtrl">
+             <a href="" ng-click="open('lg')" class="hidden-category"><span>Glossary of Terms</span><img src="img/glossary-icon.png"></a>
+            </div> -->
+          </div>
+          <div class="results open">
+            <div id="results-musthave" class="row collapse-margin">
+
+          </div>
+        </div>
+      </div>
+      </section>
+    </div>
+
+
+
+    <div class="page-container">
+      <section class="section-results">
+        <div class="container">
+          <h5 class="category empty"></h5>
+          <h4 class="category-title"><i><strong>Nice-to-Have</strong></i> Features:</h4><a href="" ng-click="activeResult($event)" class="sml-mobile"><i class="fa fa-angle-down more-results"></i></a>
+          <div class="results">
+            <div id="results-nicetohave" class="row collapse-margin">
+
+          </div>
+        </div>
+      </div>
+      </section>
+    </div>
+
+
+
+    <div class="page-container">
+      <section class="section-results">
+        <div class="container">
+          <h5 class="category empty"></h5>
+          <h4 class="category-title"><i><strong>Not-Sure</strong></i> Features:</h4><a href="" ng-click="activeResult($event)" class="sml-mobile"><i class="fa fa-angle-down more-results"></i></a>
+          <div class="results">
+            <div id="results-notsure" class="row collapse-margin">
+
+          </div>
+        </div>
+      </div>
+      </section>
+    </div>
+
+    <div class="page-container hidden-category">
+      <section class="footer-cta">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-6 col-lg-6">
+              <!-- <div class="print-button"><a href="javascript:window.print()"><i class="fa fa-print" aria-hidden="true"></i> Print Your Checklist</a></div> -->
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-6 callout">
+                <div class="cta">
+                  <h3>Want to find out how A Fortune 500 Company can meet your needs?</h3>
+                  <h5>Contact Jane Doe</h5>
+                  <div class="contact">
+                    <a href="tel:+18005555555">1-800-555-5555<i class="fa fa-phone phone" aria-hidden="true" style="padding-left:15px"></i></a><a href="mailto:contact@email.com"><i class="fa fa-envelope-o" style="padding-left:15px" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="footer hidden-category">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h4>Find out more about email marketing automation:</h4>
+            <hr>
+            <h5>Lorem Ipsum</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <a href="http://example.com">commodo consequat.</a></p>
+          </div>
+        </div>
+        </div>
+        <div class="container">
+        <div class="row">
+          <div class="col-xs-12 privacy-legal">
+            <hr>
+            <h4>A Fortune 500 Company</h4>
+            <h4 class="privacy"><a href="">Privacy</a> | <a href="">Legal</a></h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="glossary-container hidden-for-print">
+      <glossary></glossary>
+      <printfooter></printfooter>
+    </div>
+    <div id="alert"><div class="text hidden-category">Re-click the checkbox in order to select a new option.</div></div>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="scripts/vendor/ui-bootstrap-tpls-1.1.2.js"></script>
+    <script src="scripts/vendor/angularSmoothScroll.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/services/data.js"></script>
+    <script src="scripts/directives/checklist.js"></script>
+    <script>
+    //Remove active disable on clicked checkbox
+    //Since checkboxes added dynamically, we need to call the change event from window load
+    $(window).load(function() {
+      var firstClick = false;
+      $('.checkbox-custom').on('click change keyup focusout' , function(){
+            if($(this).is(':checked')) {
+              $(this).removeAttr('disabled');
+              if (!firstClick) {
+                $('#alert').animate({"margin-right": '+=200'},500).delay(4000).fadeOut('fast');
+                firstClick = true;
+              }
+            }
+      });
+    });
+    </script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+</body>
+</html>
