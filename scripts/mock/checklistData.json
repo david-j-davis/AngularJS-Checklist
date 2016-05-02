@@ -1,0 +1,293 @@
+[
+  {
+    "category": "Your Email Automation Must-Have Checklist",
+    "pages": [
+      {
+        "title":"Multi-Channel Marketing",
+        "content":[
+          {
+            "title":"Email",
+            "text":"",
+            "subgroup": false,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Transactional emails",
+            "text": "",
+            "subgroup": true,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Mobile",
+            "text": "",
+            "subgroup": false,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "SMS",
+            "text": "",
+            "subgroup": true,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Push notifications",
+            "text": "",
+            "subgroup": true,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Social",
+            "text": "",
+            "subgroup": false,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Social publishing",
+            "text": "",
+            "subgroup": true,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Social listening",
+            "text": "",
+            "subgroup": true,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Social advertising",
+            "text": "",
+            "subgroup": true,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Web",
+            "text": "",
+            "subgroup": false,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Landing pages",
+            "text": "",
+            "subgroup": true,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Web forms",
+            "text": "",
+            "subgroup": true,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Progressive web form",
+            "text": "Progressive web forms allow you to ask for information incrementally each time a prospect visits your site, instead of all at once.",
+            "subgroup": true,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Create Engaging Marketing Assets" ,
+        "content":[
+          {
+            "title":"Emails" ,
+            "text":"",
+            "subgroup": false,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title":"WYSIWYG" ,
+            "text":"WYSIWYG (“What You See Is What You Get”) editor is a program that allows you to easily manipulate the layout of a document and see what the end result will look like while the content is being created.",
+            "subgroup": true,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title":"Predesigned templates" ,
+            "text":"",
+            "subgroup": true,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title":"A/B testing" ,
+            "text":"The ability to test two versions of different factors within your marketing efforts (subject lines, web pages, etc.) to determine the highest-performing elements to send to your audience.",
+            "subgroup": true,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Landing pages",
+            "text":"",
+            "subgroup": false,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Web forms: traditional and progressive",
+            "text": "",
+            "subgroup": false,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Dynamic content",
+            "text": "Dynamic content is content (such as emails, websites, landing pages, etc.) that you can modify based on the prospect and their interests. ",
+            "subgroup": false,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Personalization",
+            "text": "Personalization is making your content and messages relevant to the prospect based on their interests, behaviors and stage in the buyer journey.",
+            "subgroup": false,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Drag-and-drop editor",
+            "text": "Drag-and-drop editor allows you create and visualize campaign flow to seamlessly design multi-touch campaigns. ",
+            "subgroup": false,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          },
+          {
+            "title": "Asset library",
+            "text": "An asset library allows you to organize and store your assets so you can find them when you need them.",
+            "subgroup": false,
+            "data":[
+              {
+                "musthave": false,
+                "nicetohave": false,
+                "notsure": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+}
+]
