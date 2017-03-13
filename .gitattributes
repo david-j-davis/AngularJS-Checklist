@@ -2,4 +2,6 @@ css/* linguist-vendored
 img/* linguist-vendored
 sass/* linguist-vendored
 templates/* linguist-vendored
+index.html linguist-vendored
 scripts/* linguist-documentation
+
